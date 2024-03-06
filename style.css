@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: #343a40; /* Ensure consistent color for all headings */
+}
+nav {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: -100%; /* Initially hide the navigation bar below the viewport */
+    background-color: #f8f9fa;
+    padding-top: 20px;
+    width: 100%;
+    transition: bottom 0.5s ease;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: -100%; /* Initially hide the navbar below the viewport */
+    background-color: #f8f9fa;
+    padding-top: 20px;
+    width: 70px; /* Adjust as needed */
+    z-index: 1; /* Ensure the navigation stays above the content */
+    transition: bottom 0.5s ease; 
+}
+
+
+nav ul li {
+    margin-bottom: 100px;
+    margin-top: 40px;
+    text-align: center;
+    position: relative;
+    width: 5%; /* Adjust as needed */
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #343a40;
+    padding: 5px;
+    display: block;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    transition: text-shadow 0.3s ease;
+}
+nav ul.show {
+    bottom: 0; /* Move the navbar up to the bottom of the viewport */
+}
+nav ul li a:hover {
+    text-shadow: 0 0 5px #000; /* Add emboss effect on hover */
+}
+section {
+    margin-left: 120px; /* Adjust to make space for the navigation */
+    margin-top: 20px; /* Add space from the top */
+}
+@keyframes slideInFromBottom {
+    0% {
+        bottom: -100%; /* Starts below the viewport */
+    }
+    100% {
+        bottom: 0; /* Ends at its default position */
+    }
+}
+/* Summary Section */
+#summary {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: left;
+}
+
+#summary img {
+    float: left; /* Aligns the image to the left */
+    margin-right: 20px; /* Adds space between the image and text */
+    width: 200px; /* Adjust image width as needed */
+    height: 200px; /* Make the image square */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    border-radius: 10px; /* Makes the image round */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the image */
+    opacity: 0; /* Initially hides the image */
+    animation: fadeIn 2s ease forwards; /* Applies fade-in animation */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Starts with full transparency */
+        transform: scale(1.2); /* Slightly scales up the image */
+    }
+    100% {
+        opacity: 1; /* Fades in to full opacity */
+        transform: scale(1); /* Returns to original scale */
+    }
+}
+
+#summary p {
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+
+p {
+    color: #6c757d;
+}
+
+#contact {
+    text-align: center;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-item img {
+    width: 50px; /* adjust as needed */
+    height: 50px; /* adjust as needed */
+    margin-right: 10px;
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%; /* ensure the container takes up the full width */
+}
+
+.project {
+    width: calc(45% - 20px); /* reduce the width of the projects */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+#skills {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skill {
+    width: calc(33% - 20px);
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.skill h3 {
+    margin-top: 0;
+    color: #343a40;
+}
+
+.skill p {
+    color: #6c757d;
+}
+
+/* Footer Section */
+footer {
+    
+    color: #f8f9fa;
+    text-align: right;
+    
+}
