@@ -1,3 +1,5 @@
+/*" I Yashvi Vyas, 000902509 certify that this material is my original work. No other person's work has been used without due acknowledgement. I have not made my work available to anyone else."*/
+
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('nav ul').classList.add('show');
     
