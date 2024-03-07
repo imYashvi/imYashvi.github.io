@@ -1,7 +1,9 @@
+/*" I Yashvi Vyas, 000902509 certify that this material is my original work. No other person's work has been used without due acknowledgement. I have not made my work available to anyone else."*/
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: black;
 }
 
 header {
@@ -16,21 +18,33 @@ header {
     padding: 20px;
 }
 
+a {
+    color: #343a40;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(20, 19, 19);
+    text-decoration: none;
+}
+
 header h1, h2, h3, h4, h5, h6 {
     margin: 0;
-    color: #343a40; /* Ensure consistent color for all headings */
+    color: #343a40;
 }
+
 nav {
     display: flex;
     align-items: center;
     position: fixed;
     left: 0;
-    bottom: -100%; /* Initially hide the navigation bar below the viewport */
+    bottom: -100%;
     background-color: #f8f9fa;
     padding-top: 20px;
     width: 100%;
     transition: bottom 0.5s ease;
 }
+
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -40,21 +54,20 @@ nav ul {
     position: fixed;
     left: 0;
     top: 0;
-    bottom: -100%; /* Initially hide the navbar below the viewport */
+    bottom: -100%;
     background-color: #f8f9fa;
     padding-top: 20px;
-    width: 70px; /* Adjust as needed */
-    z-index: 1; /* Ensure the navigation stays above the content */
-    transition: bottom 0.5s ease; 
+    width: 70px;
+    z-index: 1;
+    transition: bottom 0.5s ease;
 }
-
 
 nav ul li {
     margin-bottom: 100px;
     margin-top: 40px;
     text-align: center;
     position: relative;
-    width: 5%; /* Adjust as needed */
+    width: 5%;
     margin-left: 20px;
 }
 
@@ -67,25 +80,51 @@ nav ul li a {
     transform-origin: left top;
     transition: text-shadow 0.3s ease;
 }
+
 nav ul.show {
-    bottom: 0; /* Move the navbar up to the bottom of the viewport */
+    bottom: 0;
 }
+
 nav ul li a:hover {
-    text-shadow: 0 0 5px #000; /* Add emboss effect on hover */
+    text-shadow: 0 0 5px #000;
 }
+
 section {
-    margin-left: 120px; /* Adjust to make space for the navigation */
-    margin-top: 20px; /* Add space from the top */
+    margin-left: 120px;
+    margin-top: 20px;
 }
+
 @keyframes slideInFromBottom {
     0% {
-        bottom: -100%; /* Starts below the viewport */
+        bottom: -100%;
     }
     100% {
-        bottom: 0; /* Ends at its default position */
+        bottom: 0;
     }
 }
-/* Summary Section */
+
+.skill img {
+    padding: 10px;
+    align-items: center;
+}
+
+.typing-animation {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #000;
+    animation: typing 3s steps(40, end) infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
 #summary {
     background-color: #f8f9fa;
     padding: 20px;
@@ -93,25 +132,25 @@ section {
 }
 
 #summary img {
-    float: left; /* Aligns the image to the left */
-    margin-right: 20px; /* Adds space between the image and text */
-    width: 200px; /* Adjust image width as needed */
-    height: 200px; /* Make the image square */
-    object-fit: cover; /* Ensure the image covers the entire container */
-    border-radius: 10px; /* Makes the image round */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the image */
-    opacity: 0; /* Initially hides the image */
-    animation: fadeIn 2s ease forwards; /* Applies fade-in animation */
+    float: left;
+    margin-right: 20px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
 }
 
 @keyframes fadeIn {
     0% {
-        opacity: 0; /* Starts with full transparency */
-        transform: scale(1.2); /* Slightly scales up the image */
+        opacity: 0;
+        transform: scale(1.2);
     }
     100% {
-        opacity: 1; /* Fades in to full opacity */
-        transform: scale(1); /* Returns to original scale */
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
@@ -119,7 +158,6 @@ section {
     color: #6c757d;
     line-height: 1.6;
 }
-
 
 p {
     color: #6c757d;
@@ -136,8 +174,8 @@ p {
 }
 
 .contact-item img {
-    width: 50px; /* adjust as needed */
-    height: 50px; /* adjust as needed */
+    width: 50px;
+    height: 50px;
     margin-right: 10px;
 }
 
@@ -145,11 +183,11 @@ p {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 100%; /* ensure the container takes up the full width */
+    width: 100%;
 }
 
 .project {
-    width: calc(45% - 20px); /* reduce the width of the projects */
+    width: calc(45% - 20px);
     margin-bottom: 20px;
     margin-top: 20px;
     padding: 10px;
@@ -179,7 +217,7 @@ p {
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .skill h3 {
@@ -191,10 +229,7 @@ p {
     color: #6c757d;
 }
 
-/* Footer Section */
 footer {
-    
     color: #f8f9fa;
     text-align: right;
-    
 }
